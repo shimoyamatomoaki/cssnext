@@ -1,0 +1,86 @@
+
+@custom-media --mq-xs screen and (max-width: 576px);
+@custom-media --mq-sm screen and (max-width: 769px);
+@custom-media --mq-md screen and (max-width: 992px);
+@custom-media --mq-lg screen and (max-width: 1200px);
+@custom-media --ipad screen (min-width: 768px) and (max-width: 1024px);
+
+@custom-selector :--reset h1,h2,h3,h4,ul,li,ol,p;
+@custom-selector :--hover :hover;
+@custom-selector :--hoge .hoge, .piyo, .fuga;
+@custom-selector :--all *;
+@custom-selector :--beforeAfter ::after, ::before;
+
+:root {
+  --clearfix: {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  --marginReset: {
+    margin: 0;
+    padding: 0;
+  }
+
+  --fontGreen: {
+    color: green;
+  }
+
+  --borderBox: {
+    box-sizing: border-box;
+  }
+
+  --reset: {
+    margin: 0;
+    padding: 0;
+  }
+
+  --list-reset: {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+.selector {
+  display: flex;
+}
+
+@media (--ipad) {
+  /** **/
+}
+
+
+:--hoge:--hover {
+  color: #000;
+}
+
+.hoge {
+  & p {
+    color: #fff;
+  }
+
+  &__fuga {
+    @apply --fontGreen;
+  }
+}
+
+.prefix {
+  transition: 0.2s;
+  transform: rotate(45deg);
+  @apply --clearfix;
+  @apply --marginReset;
+}
+
+*,:--all:--beforeAfter {
+  @apply --reset;
+}
+
+:--reset {
+  margin: 0;
+}
+
+.selector {
+  @apply --list-reset;
+}

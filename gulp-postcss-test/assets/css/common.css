@@ -1,0 +1,121 @@
+html {
+  font-size: 14px;
+}
+
+.foo {
+  max-width: 960px;
+  color: #000;
+  font-size: 1rem;
+}
+
+.bar:hover,
+.bar:active,
+.bar:focus {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .baz {
+  }
+
+  .baz::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    color: #91d142;
+    font-weight: bold;
+  }
+
+  .btn {
+    color: #91d142;
+    background-color: red;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .btn:focus {
+    background-color: blue;
+  }
+}
+
+.selector {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen (min-width: 768px) and (max-width: 1024px) {
+  /** **/
+}
+
+.hoge:hover,
+.piyo:hover,
+.fuga:hover {
+  color: #000;
+}
+
+.hoge {
+}
+
+.hoge p {
+  color: #fff;
+}
+
+.hoge__fuga {
+  color: green;
+}
+
+.prefix {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: block;
+  clear: both;
+  content: "";
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+ol,
+p {
+  margin: 0;
+}
+
+.selector {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}

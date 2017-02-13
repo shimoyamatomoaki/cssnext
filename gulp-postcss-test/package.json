@@ -1,0 +1,21 @@
+{
+  "name": "gulp-postcss-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files '**/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0",
+    "stylefmt": "^5.1.1"
+  }
+}

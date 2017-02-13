@@ -1,0 +1,63 @@
+:root {
+  --width: 700px;
+  --text-pet: {
+    color: #91d142;
+  }
+
+  --text-pet-bold: {
+    color: #91d142;
+    font-weight: bold;
+  }
+
+  --bgc-red: {
+    background-color: red;
+  }
+
+  --bgc-blue: {
+    background-color: blue;
+  }
+
+  --bgc-green: {
+    background-color: green;
+  }
+
+  --max-width-xl: {
+    max-width: 1200px;
+  }
+
+  --width-100: {
+    width: 100%;
+  }
+
+  --margin--auto-center: {
+    margin: 0 auto;
+  }
+}
+
+@custom-media --mq-xs screen and (max-width: 1200px);
+@custom-selector :--onEvent :hover, :active, :focus;
+
+.container {
+  @apply --max-width-xl;
+  @apply --width-100;
+  @apply --margin--auto-center;
+}
+
+.btn:--onEvent {
+  opacity: 0.7;
+}
+
+@media ( --mq-xs ) {
+  .section {
+    @apply --text-pet-bold
+  }
+
+  .btn {
+    @apply --text-pet;
+    @apply --bgc-red;
+  }
+
+  .btn:--onEvent {
+    @apply --bgc-blue;
+  }
+}
